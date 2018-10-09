@@ -129,7 +129,7 @@ var pluginName = "ik_suggest",
 						}
 						plugin.notify.text(msg); // add suggestion text to live region to be read by screen reader
 						break;
-					case ik_utils.keys.up: // select previous suggestion from list
+			case ik_utils.keys.up: // select previous suggestion from list
 						selected = plugin.list.find('.selected');
 						if(selected.length) {
 							msg = selected.removeClass('selected').prev().addClass('selected').text();
@@ -137,7 +137,7 @@ var pluginName = "ik_suggest",
 						plugin.notify.text(msg);  // add suggestion text to live region to be read by screen reader    
 						break;
 				   
-					default: // get suggestions based on user input			
+			default: // get suggestions based on user input			
 				plugin.list.empty();
 				
 				suggestions = plugin.getSuggestions(plugin.options.source, $me.val());
@@ -152,7 +152,7 @@ var pluginName = "ik_suggest",
 				} else {
 					plugin.list.hide();
 				}
-			break;
+			    break;
 		}
 	};
 	
