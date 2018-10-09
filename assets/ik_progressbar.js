@@ -2,8 +2,8 @@
 	
 	var pluginName = 'ik_progressbar',
 		defaults = { // values can be overitten by passing configuration options to plugin constructor 
-			'max': 100
-			'instructions': 'Press spacebar, or Enter to get progress',
+			'max': 100,
+			'instructions': 'Press spacebar, or Enter to get progress'
 		};
 	
 	/**
