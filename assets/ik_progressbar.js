@@ -41,7 +41,6 @@
 			})
 			.addClass('ik_progressbar')
 			.on('keydown.ik', {'plugin': this}, this.onKeyDown);
-      ;
 		
 		this.fill = $('<div/>')
 			.addClass('ik_fill');
@@ -151,8 +150,6 @@ Plugin.prototype.onKeyDown = function(event) {
 	        .attr({ // accessible
                'aria-valuenow': val
 		    });
- 
-      ;
 		
 		this.updateDisplay();
 		
@@ -194,6 +191,6 @@ Plugin.prototype.onKeyDown = function(event) {
 			
 		});
 		
-	}
+	};
 	
 })( jQuery, window, document );
