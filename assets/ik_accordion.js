@@ -109,11 +109,15 @@
 					$hdr.next().slideDown(plugin.options.animationSpeed);
 				}
 			});
-			$panel.attr('aria-hidden','false');
 			
 		} else { // toggle current panel depending on the state
 		
 			isVisible = !!$panel.is(':visible');
+			if (isVisible) {
+				$btn.attr('aria-expanded','true');
+			} else {
+				$btn.attr('aria-expanded','false');
+			}
 			$panel.slideToggle({ duration: plugin.options.animationSpeed });
 			
 		}
