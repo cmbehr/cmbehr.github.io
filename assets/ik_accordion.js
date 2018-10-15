@@ -100,13 +100,13 @@
 				if($btn[0] != $(event.currentTarget)[0]) { 
 					$btn.removeClass('expanded');
 					$btn.attr('aria-expanded','false');
+					$btn.parent('dt').next().attr('aria-hidden','true');
 					$hdr.next().slideUp(plugin.options.animationSpeed);
-					$panel.attr('aria-hidden','true');
 				} else { 
 					$btn.addClass('expanded');
 					$btn.attr('aria-expanded','true');
+					$btn.parent('dt').next().attr('aria-hidden','false');
 					$hdr.next().slideDown(plugin.options.animationSpeed);
-					$panel.attr('aria-hidden','false');
 				}
 			});
 			
