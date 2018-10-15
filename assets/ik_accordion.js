@@ -109,6 +109,7 @@
 					$hdr.next().slideDown(plugin.options.animationSpeed);
 				}
 			});
+			$panel.attr('aria-hidden','false');
 			
 		} else { // toggle current panel depending on the state
 		
