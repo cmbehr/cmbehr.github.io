@@ -114,6 +114,7 @@
 		
 			isVisible = !!$panel.is(':visible');
 			$panel.slideToggle({ duration: plugin.options.animationSpeed });
+			$panel.attr('aria-hidden','false');
 			
 		}
 	};
