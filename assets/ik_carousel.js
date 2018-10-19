@@ -41,9 +41,9 @@
 			'aria-labelledby': id + '_instructions' // associate with instructions
 			})
 			.addClass('ik_carousel')
-			.on('mouseenter', {'plugin': plugin}, plugin.stopTimer)
+			.on('focusin mouseenter', {'plugin': plugin}, plugin.stopTimer)
 		    .on('keydown', {'plugin': plugin}, plugin.onKeyDown)
-			.on('mouseleave', {'plugin': plugin}, plugin.startTimer);
+			.on('focusout mouseleave', {'plugin': plugin}, plugin.startTimer);
 		
 		$controls = $('<div/>')
 			.attr({
