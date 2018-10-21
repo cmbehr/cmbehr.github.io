@@ -100,12 +100,12 @@
 				if($btn[0] != $(event.currentTarget)[0]) { 
 					$btn.removeClass('expanded');
 					$btn.attr('aria-expanded','false');
-					$btn.parent('dt').next().attr('aria-hidden','true');
+					//$btn.parent('dt').next().attr('aria-hidden','true');
 					$hdr.next().slideUp(plugin.options.animationSpeed);
 				} else { 
 					$btn.addClass('expanded');
 					$btn.attr('aria-expanded','true');
-					$btn.parent('dt').next().attr('aria-hidden','false');
+					//$btn.parent('dt').next().attr('aria-hidden','false');
 					$hdr.next().slideDown(plugin.options.animationSpeed);
 				}
 			});
@@ -113,11 +113,11 @@
 		} else { // toggle current panel depending on the state
 		
 			isVisible = !!$panel.is(':visible');
-			if (isVisible) {
+			/*if (isVisible) {
 				$me.attr('aria-expanded','true');
 			} else {
 				$me.attr('aria-expanded','false');
-			}
+			}*/
 			$panel.slideToggle({ duration: plugin.options.animationSpeed });
 			
 		}
