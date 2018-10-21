@@ -37,7 +37,7 @@
 				'aria-valuenow': 0, // set current value to 0
 				'aria-valuemin': 0, // set minimum (start) value to 0 (required by screen readers)
 				'aria-valuemax': this.options.max, // set maximum (end) value
-				'aria-labelledby': id + '_instructions' // add aria-describedby attribute
+				'aria-describedby': id + '_instructions' // add aria-describedby attribute
 			})
 			.addClass('ik_progressbar')
 			.on('keydown.ik', {'plugin': this}, this.onKeyDown);
@@ -68,30 +68,6 @@
 			.appendTo(this.element);
 		
 	};
-	
-/**
- * Handles keydown event on progressbar element.
- *
- * @param {Object} event - Keyboard event.
- * @param {object} event.data - Event data.
- * @param {object} event.data.plugin - Reference to plugin.
- */
-Plugin.prototype.onKeyDown = function(event) {
-       
-    switch(event.keyCode) {
-           
-        case ik_utils.keys.space:
-		case 32:
-		case ik_utils.keys.enter:
-        case 13: 
-            event.preventDefault();
-            event.stopPropagation();
-            event.data.plugin.notify();
-            break;
-    }
- 
-       
-};
 
 	/** 
 	 * Gets the current value of progressbar. 
@@ -194,5 +170,31 @@ Plugin.prototype.onKeyDown = function(event) {
 		});
 		
 	};
-	
+		
+	/**
+	 * Handles keydown event on progressbar element.
+	 *
+	 * @param {Object} event - Keyboard event.
+	 * @param {object} event.data - Event data.
+	 * @param {object} event.data.plugin - Reference to plugin.
+	 */
+	Plugin.prototype.onKeyDown = function(event) {
+		   
+		switch(event.keyCode) {
+			   
+			case ik_utils.keys.space:
+			case 32:
+			case '32':
+			case ik_utils.keys.enter:
+			case 13: 
+			case '13': 
+				event.preventDefault();
+				event.stopPropagation();
+				event.data.plugin.notify();
+				break;
+		}
+	 
+		   
+	};
+
 })( jQuery, window, document );
