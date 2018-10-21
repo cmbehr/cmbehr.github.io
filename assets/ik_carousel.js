@@ -2,7 +2,7 @@
 	
 	var pluginName = 'ik_carousel',
 		defaults = { // default settings
-        'instructions': 'Carousel widget. Use left and reight arrows to navigate between slides.',
+        'instructions': 'Carousel widget. Use left and right arrows to navigate between slides.',
 		'animationSpeed' : 3000
 		};
 	 
@@ -36,9 +36,9 @@
 		$elem
 			.attr({
 				'id': id,
-			'role': 'region', // assign region role
-			'tabindex': 0, // add into the tab order
-			'aria-labelledby': id + '_instructions' // associate with instructions
+				'role': 'region', // assign region role
+				'tabindex': 0, // add into the tab order
+				'aria-labelledby': id + '_instructions' // associate with instructions
 			})
 			.addClass('ik_carousel')
 		    .on('keydown', {'plugin': plugin}, plugin.onKeyDown)
