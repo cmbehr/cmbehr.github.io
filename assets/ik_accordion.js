@@ -113,12 +113,12 @@
 		} else { // toggle current panel depending on the state
 		
 			isVisible = !!$panel.is(':visible');
-			/*if (isVisible) {
+			$panel.slideToggle({ duration: plugin.options.animationSpeed });
+			if (isVisible) {
 				$me.attr('aria-expanded','true');
 			} else {
 				$me.attr('aria-expanded','false');
-			}*/
-			$panel.slideToggle({ duration: plugin.options.animationSpeed });
+			}
 			
 		}
 	};
