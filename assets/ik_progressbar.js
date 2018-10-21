@@ -80,8 +80,8 @@ Plugin.prototype.onKeyDown = function(event) {
        
     switch(event.keyCode) {
            
-        case ik_utils.keys.space:
-        case ik_utils.keys.enter:
+        case 32: //ik_utils.keys.space:
+        case 13: //ik_utils.keys.enter:
             event.preventDefault();
             event.stopPropagation();
             event.data.plugin.notify();
