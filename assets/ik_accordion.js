@@ -115,11 +115,11 @@
 			isVisible = !!$panel.is(':visible');
 			$panel.slideToggle({ duration: plugin.options.animationSpeed });
 			if (isVisible) {
-				$me.attr('aria-expanded','true');
-				$me.parent('dt').next().attr('aria-hidden','false');
-			} else {
 				$me.attr('aria-expanded','false');
 				$me.parent('dt').next().attr('aria-hidden','true');
+			} else {
+				$me.attr('aria-expanded','true');
+				$me.parent('dt').next().attr('aria-hidden','false');
 			}
 			
 		}
